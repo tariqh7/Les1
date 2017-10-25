@@ -1,14 +1,4 @@
 def som(getallenlijst):
-    answer = sum(getallenlijst)
-    return answer
+    print (sum(getallenlijst))
 
-
-
-
-
-def som(getallenlijst):
-    return sum(getallenlijst)
-    print(som(7,700,800))
-
-a = som(7,700,800)
-print (a)
+som([1,2,3,4,5,6])
