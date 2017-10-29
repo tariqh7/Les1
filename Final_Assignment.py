@@ -1,9 +1,22 @@
-for line in lines:
-    print (line)
-    nummer_naam = line.split(',')
-    naam = nummer_naam[1].strip()
-    nummer = nummer_naam[0].strip()
-    text = '{} heeft kaartnummer: {}'.format(naam, nummer)
+def standaardprijs(afstandKM):
+    if afstandKM > 50:
+        return 15 + (afstandKM - 50) * 0.6
+    elif afstandKM <= 0:
+        return 0
+    else:
+        return afstandKM * 0.8
 
 
-    #met .strip() haal je spaties weg
+def ritprijs(leeftijd, weekendrit, afstandKM):
+    standaard = standaardprijs(afstandKM)
+    prijs = 0
+    if leeftijd <= 12 or leeftijd >= 65:
+        if weekendrit:
+            prijs = standaard * 0.65
+        else:
+            prijs = standaard * 0.7
+    elif weekendrit:
+        prijs = standaard * 0.6
+    return prijs
+
+
