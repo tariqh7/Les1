@@ -4,9 +4,9 @@ students = cursus.keys()
 
 
 
-
-if cijfers >= 9:
-      print (students, cijfers)
+for i, e in cursus.items()
+      if cijfers >= 9:
+            print (students, cijfers)
 
 
 #for student in students
